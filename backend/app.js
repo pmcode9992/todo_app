@@ -9,17 +9,29 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = 3000;
 
-app.set("view engine", "ejs");
+// app.set("view engine", "ejs");
+// Replace This with whatever alternate code u have to use
 
 app.get("/", (req,res)=>{
-    var options = { weekday: 'short',  month: 'long', day: 'numeric' };
-    let today = new Date();
-    let currentDay = today.toLocaleDateString("en-US", options)
-    var a = document.getElementById("today");
-    console.log(a);
+    res.send("Welcome to the server")
 });
 
-app.post("/", (req,res)=>{
+app.post("/create/todo", (req,res)=>{
+    //Code to create Todo item
+    
+});
+
+app.get("/get/all/todo", (req,res)=>{
+    //Code to get all items
+    
+});
+
+app.put("/update/todo", (req,res)=>{
+    //Code to update an item
+    
+});
+app.delete("/delete/todo", (req,res)=>{
+    //Code to delete an item
     
 });
 
